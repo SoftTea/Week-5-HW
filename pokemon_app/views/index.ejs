@@ -14,6 +14,12 @@
 </head>
 <body>
     <h1>See All The Pokemon!</h1>
+
+    <ul>
+        <% for(let i = 0; i< pokemons.length ; i ++) { %>
+        <li> <%=pokemons[i].name%></li>
+       <% } %>
+    </ul>
     
 </body>
 </html>

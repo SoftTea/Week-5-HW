@@ -11,7 +11,9 @@ app.get('/home', (req,res)=>{
 })
 
 app.get('/pokemon', (req,res)=>{
-    res.render('index.ejs');
+    res.render('index.ejs', {
+        pokemons: Pokemon
+    });
 })
 
 app.listen(port, ()=>{
