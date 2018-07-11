@@ -1,17 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <title>Document</title>
 </head>
 <body>
-    <h1>See All The Pokemon!</h1>
-
+    <div class="flexCon"> 
+        <h1>See All The Pokemon!</h1>
+    </div>
     <ul>
         <% for(let i = 0; i< pokemons.length ; i ++) { %>
+            <img src="<%=pokemons[i].img%>" alt="" srcset="" class='indexImg'>
         <li> <a href="/pokemon/<%=i%>"><%=pokemons[i].name%></a></li>
        <% } %>
     </ul>

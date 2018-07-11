@@ -1,0 +1,28 @@
+body {
+    background-color: bisque;
+    color: rgb(49, 75, 75);
+    text-align: center;
+   
+    
+}
+.flexCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.indexImg {
+    height: 12em;
+}
+li {
+    font-size: 2em;
+    padding: .5em 0 .5em 0;
+}
+ul {
+    list-style-type: none;
+}
+
+img {
+    border-radius: 50%;
+    margin: 4em 0 4em 0;
+}
+
