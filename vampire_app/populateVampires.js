@@ -71,3 +71,46 @@ db.on('connected', ()=>{
 //         console.log(res);
 //       }
 //     })
+
+// Vampire.find({gender: 'f'}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+// Vampire.find({victims: {$gt: 500} }, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+// Vampire.find({victims: {$lte:150}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+// Vampire.find({victims: {$ne: 210234}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+// Vampire.find({victims: {$gt: 150, $lt: 500}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+
+
