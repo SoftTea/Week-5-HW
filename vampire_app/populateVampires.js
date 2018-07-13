@@ -112,5 +112,38 @@ db.on('connected', ()=>{
 //   }
 // })
 
+// Vampire.find({title: {$exists: true}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+// Vampire.find({victims: {$exists: false}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+// Vampire.find({title: {$exists: true}, victims: {$exists: false}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+Vampire.find({victims: {$exists: true, $gt: 1000}}, (err,res)=> {
+  if(err){
+    console.log(err);
+  } else {
+    console.log(res);
+  }
+})
+
+
 
 
