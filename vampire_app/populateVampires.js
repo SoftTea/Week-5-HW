@@ -136,13 +136,23 @@ db.on('connected', ()=>{
 //   }
 // })
 
-Vampire.find({victims: {$exists: true, $gt: 1000}}, (err,res)=> {
+// Vampire.find({victims: {$exists: true, $gt: 1000}}, (err,res)=> {
+//   if(err){
+//     console.log(err);
+//   } else {
+//     console.log(res);
+//   }
+// })
+
+Vampire.find( { $or:  [{location: {$eq: "New York, New York, US"}}, {location: {$eq:'New Orleans, Louisiana, US' } }]  }, (err,res)=> {
   if(err){
     console.log(err);
   } else {
     console.log(res);
   }
 })
+
+
 
 
 
