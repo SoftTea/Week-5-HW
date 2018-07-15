@@ -4,6 +4,7 @@ const router = express.Router();
 
 const Music = require('../models/music');
 
+// ** Home Route **
 router.get('/', (req,res)=>{
   
   Music.find({},(err, allMusic)=>{
@@ -15,7 +16,26 @@ router.get('/', (req,res)=>{
       })
     }
   })
-})
+});
+
+// ** Create Page **
+
+router.get('/new', (req,res)=>{
+  res.render('new.ejs');
+});
+
+// ** POST Route -- Create Request **
+router.post('/', (req,res)=>{
+  Music.create(req.body, (err, created)=>{
+    if(err) {
+      res.render(err);
+    } else {
+      console.log('added obj', req.body);
+      res.redirect('/music');
+    }
+  })
+});
+
 
 
 module.exports = router;
