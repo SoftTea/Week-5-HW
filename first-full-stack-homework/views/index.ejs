@@ -13,7 +13,7 @@
   <h2>Music tracker</h2>
 
   <% for(let i = 0; i< music.length; i++) {%>
-    <img src="<%=music[i].coverImg%>" alt="" srcset="">
+    <a href="/music/<%=music[i].id%>"> <img src="<%=music[i].coverImg%>" alt="" srcset=""> </a>
     <h3>Artist: <%=music[i].artist%></h3>
     <ul>
       <li>

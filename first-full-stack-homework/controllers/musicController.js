@@ -47,6 +47,21 @@ router.delete('/:id', (req,res)=> {
       res.redirect('/music')
     }
   })
+});
+
+// ** Show Route for individual information ** 
+
+router.get('/:id', (req,res) => {
+  Music.findById(req.params.id , (err,found)=>{
+    if(err) {
+      console.log('this is the error on show page', err);
+      res.send(err);
+    } else {
+      res.render('show.ejs', {
+        album: found
+      })
+    }
+  })
 })
 
 
