@@ -36,6 +36,19 @@ router.post('/', (req,res)=>{
   })
 });
 
+// ** Delete route **
+
+router.delete('/:id', (req,res)=> {
+  Music.findByIdAndDelete(req.params.id, (err,deleted)=>{
+    if(err) {
+      console.log('delete error', err)
+    } else {
+      console.log(deleted);
+      res.redirect('/music')
+    }
+  })
+})
+
 
 
 module.exports = router;
