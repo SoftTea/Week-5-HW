@@ -49,6 +49,33 @@ router.delete('/:id', (req,res)=> {
   })
 });
 
+// ** Edit Render Page 
+router.get('/:id/edit', (req,res)=>{
+  Music.findById(req.params.id, (err, found)=>{
+    if(err) {
+      console.log('error for the edit page route', err )
+    } else (
+      res.render('edit.ejs', {
+        album: found
+      })
+    )
+  })
+})
+
+// ** Edit Router -- PUT router
+router.put('/:id', (req,res)=>{
+  console.log();
+  Music.findByIdAndUpdate(req.params.id , req.body, {new:true}, (err, updated)=>{
+    
+    if(err) {
+      console.log('this is the error for the edit router', err)
+      res.send(err);
+    } else {
+      res.redirect('/music');
+    }
+  })
+});
+
 // ** Show Route for individual information ** 
 
 router.get('/:id', (req,res) => {
